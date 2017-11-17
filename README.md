@@ -1,5 +1,7 @@
 # Swagger Injector
 
+* This is a fork extended for restify framework support *
+
 [![Build Status](https://travis-ci.org/johnhof/swagger-injector.svg?branch=master)](https://travis-ci.org/johnhof/swagger-injector)
 
 Adaptation of [swagger ui](https://github.com/swagger-api/swagger-ui) to render the swagger view of a server's swagger documentation for a specified route.
@@ -13,6 +15,7 @@ If you're unfamiliar with swagger, I highly recommend [checking it out](http://s
 - [Usage](#usage)
   - [Koa](#koa)
   - [Express](#express)
+  - [Restify](#restify)
 - [Defaults](#defaults)
 - [Configuration](#configuration)
 
@@ -61,6 +64,12 @@ app.use(swagger.express({
 }));
 
 app.listen(3000);
+```
+
+### Restify
+
+```javascript
+server.pre(swagger.restify())
 ```
 
 # Configuration
