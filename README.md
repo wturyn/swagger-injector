@@ -69,7 +69,12 @@ app.listen(3000);
 ### Restify
 
 ```javascript
-server.pre(swagger.restify())
+const restify = require('restify');
+const server = restify.createServer();
+
+server.pre(swagger.restify());
+
+server.listen(3000);
 ```
 
 # Configuration
