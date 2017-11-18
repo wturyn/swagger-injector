@@ -70,9 +70,12 @@ app.listen(3000);
 
 ```javascript
 const restify = require('restify');
+const swagger = require('swagger-injector');
 const server = restify.createServer();
 
-server.pre(swagger.restify());
+server.pre(swagger.restify({
+  path: `${__dirname}/swagger.json`
+}));
 
 server.listen(3000);
 ```
